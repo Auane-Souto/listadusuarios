@@ -13,11 +13,24 @@
       <input type="email" id="email" placeholder="Email" required />
       <input type="text" id="cargo" placeholder="Cargo" required />
       <button type="submit">Adicionar</button>
-    </form> <!--formUsuario-->
+    </form>
 
-    <p class="footer-text">Ainda não tem conta? <a href="#">Registre-se</a></p>
+    <p class="footer-text">
+      Ainda não tem conta? <a href="#" id="linkRegistro">Registre-se</a>
+    </p>
+  </div> <!--Container-->
 
-  </div> <!--container-->
+  <!-- Formulário de Registro -->
+   
+  <div class="registro" id="registroContainer">
+    <form id="formRegistro">
+      <h2>Formulário de Registro</h2>
+      <input type="text" id="nomeCompleto" placeholder="Nome completo" required />
+      <input type="email" id="emailRegistro" placeholder="Email" required />
+      <input type="password" id="senha" placeholder="Senha" required />
+      <button type="submit">Registrar</button>
+    </form>
+  </div> <!--Registro-->
 
   <script src="script.js"></script>
 </body>

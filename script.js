@@ -10,7 +10,7 @@ function salvarUsuarios() {
 }
 
 form.addEventListener("submit", (e) => {
-  e.preventDefault(); // evita o envio padrão do formulário
+  e.preventDefault(); // Evita o envio padrão do formulário
 
   const novoUsuario = {
     nome: nomeInput.value.trim(),
@@ -18,29 +18,62 @@ form.addEventListener("submit", (e) => {
     cargo: cargoInput.value.trim()
   };
 
-  // validação de campos vazios
+  // Validação de campos vazios
   if (!novoUsuario.nome || !novoUsuario.email || !novoUsuario.cargo) {
     alert("Preencha todos os campos!");
     return;
   }
 
-  // validação de formato do email
+  // Validação de formato do email
   const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(novoUsuario.email);
   if (!emailValido) {
     alert("Email inválido!");
     return;
   }
 
-  // verificação de email já cadastrado
+  // Verificação de email já cadastrado
   const jaExiste = usuarios.some(u => u.email === novoUsuario.email);
   if (jaExiste) {
     alert("Esse email já está cadastrado!");
     return;
   }
 
-  // salvar novo usuário
+  // Salvar novo usuário
   usuarios.push(novoUsuario);
   salvarUsuarios();
   form.reset();
   console.log("Usuário cadastrado:", novoUsuario);
+});
+
+//Form registro
+
+const emailRegistroInput = document.getElementById("emailRegistro");
+
+// Remove espaços indesejados
+const emailDigitado = emailRegistroInput.value.trim();
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Impede rolagem inicialmente
+  document.body.style.overflow = "hidden";
+
+  // Seleciona o link e o container do formulário de registro
+  const linkRegistro = document.querySelector('.footer-text a');
+  const registroContainer = document.querySelector('.registro');
+
+  // Garante que o formulário esteja oculto
+  registroContainer.classList.remove("show");
+
+  // Evento de clique no link
+  linkRegistro.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    // Mostra o formulário de registro
+    registroContainer.classList.add("show");
+
+    // Libera rolagem
+    document.body.style.overflow = "auto";
+
+    // Rola até o formulário
+    registroContainer.scrollIntoView({ behavior: "smooth" });
+  });
 });
