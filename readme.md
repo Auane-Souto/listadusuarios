@@ -1,6 +1,6 @@
 # 📋 Lista de Usuários
 
-Um projeto simples de cadastro de usuários com frontend em HTML/CSS/JS e backend em Node.js com Express. praticando conceitos de formulários, manipulação de dados e integração entre cliente e servidor.
+Um projeto simples de cadastro de usuários com frontend em HTML/CSS/JS e backend em Node.js com Express. Praticando conceitos de formulários, manipulação de dados e integração entre cliente e servidor.
 
 ---
 
