@@ -1,1 +1,27 @@
-[]
+[
+  {
+    "nome": "werrerwerw",
+    "email": "wfbvwefhb@gmail.com",
+    "cargo": "front"
+  },
+  {
+    "nome": "Poppins",
+    "email": "poppins@gmail.com",
+    "cargo": "back"
+  },
+  {
+    "nome": "Auane",
+    "email": "auanesouto360@gmail.com",
+    "cargo": "Frontend"
+  },
+  {
+    "nome": "Mariana",
+    "email": "mariana@gmail.com",
+    "cargo": "back"
+  },
+  {
+    "nome": "viviane",
+    "email": "viviane@gmail.com",
+    "cargo": "fullstack"
+  }
+]

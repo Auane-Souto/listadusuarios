@@ -38,3 +38,8 @@ app.post('/usuarios', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
 });
+
+app.get('/', (req, res) => {
+  res.send('API de cadastro de usuários está funcionando! 🚀');
+});
+
